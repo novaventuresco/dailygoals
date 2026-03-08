@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Daily Goals</title>
+  <meta name="description" content="Thoughts on productivity, daily goals, and building apps that don't make you feel bad." />
+  <link rel="canonical" href="https://novaventuresco.github.io/dailygoals/blog" />
+  
+  <link rel="icon" type="image/png" href="../assets/images/splash-icon.png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sky:       #5BBFD9;
+      --sky-deep:  #3A9DBF;
+      --sky-pale:  #E8F6FB;
+      --white:     #FFFFFF;
+      --ink:       #1A2832;
+      --ink-soft:  #3D5260;
+      --muted:     #7A96A3;
+      --font-head: 'Lora', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(91,191,217,0.2);
+      box-shadow: 0 1px 12px rgba(26,40,50,0.07);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .nav-brand span {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+
+    h1 {
+      font-family: var(--font-head);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 60px;
+    }
+
+    .blog-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .post-card {
+      padding: 32px;
+      background: var(--sky-pale);
+      border-radius: 16px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(91,191,217,0.2);
+    }
+
+    .post-date {
+      font-size: 0.85rem;
+      color: var(--sky-deep);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .post-title {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .post-excerpt {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(91,191,217,0.2);
+    }
+
+    footer a {
+      color: var(--sky-deep);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 14px 24px; }
+      .container { padding: 60px 24px 80px; }
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="/" class="nav-brand">
+      <img src="../assets/images/splash-icon.png" alt="Daily Goals" />
+      <span>Daily Goals</span>
+    </a>
+  </nav>
+
+  <div class="container">
+    <h1>Blog</h1>
+    <p class="subtitle">Thoughts on productivity, daily goals, and building apps that don't make you feel bad.</p>
+
+    <div class="blog-posts">
+      
+      <!-- Blog Post 1 -->
+      <a href="why-i-built-daily-goals.html" class="post-card">
+        <div class="post-date">March 2025</div>
+        <h2 class="post-title">Why I Built Daily Goals: Forced Simplicity and Fresh Starts</h2>
+        <p class="post-excerpt">
+          I wanted a simple app that helps me focus on what truly matters, today. Most habit trackers want you to track everything. I wanted to pick 3 things each day that are non-negotiable priorities.
+        </p>
+      </a>
+
+      <!-- Add future blog posts here -->
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Nova Ventures Co. · <a href="/">Daily Goals</a> · <a href="https://novaventuresco.github.io/dailygoals-privacy/">Privacy</a></p>
+  </footer>
+
+</body>
+</html>
