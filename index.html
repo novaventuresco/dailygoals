@@ -3,13 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily Goals — Guilt-Free Daily Goal Tracker</title>
-  <meta name="description" content="A simple iPhone app that helps you focus on 3–5 daily priorities with no streak pressure and a fresh start every morning. Free on the App Store." />
+  
+  <!-- SEO OPTIMIZATION: Enhanced title with more keywords -->
+  <title>Daily Goals: Guilt-Free Daily Goal Tracker & Habit App for iPhone</title>
+  
+  <!-- SEO OPTIMIZATION: Expanded meta description with more keywords -->
+  <meta name="description" content="A simple iPhone app that helps you focus on 3–5 daily priorities without streak pressure. Free goal tracker with fresh starts every morning, partial progress tracking, and no guilt. Download free on the App Store." />
+  
+  <!-- SEO OPTIMIZATION: Added keywords meta tag -->
+  <meta name="keywords" content="daily goals, goal tracker, habit tracker, productivity app, guilt-free habits, no streak pressure, daily planner, simple goals, iPhone app, fresh start, daily priorities, progress over perfection" />
+  
+  <!-- SEO OPTIMIZATION: Added canonical URL -->
+  <link rel="canonical" href="https://novaventuresco.github.io/dailygoals/" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph - UPDATED with absolute image URL -->
   <meta property="og:title" content="Daily Goals — Guilt-Free Daily Goal Tracker" />
   <meta property="og:description" content="No streak pressure. No carried guilt. Just today's priorities, done your way." />
-  <meta property="og:image" content="assets/images/screen-fresh-start.png" />
+  <meta property="og:image" content="https://novaventuresco.github.io/dailygoals/assets/images/screen-fresh-start.png" />
+  <meta property="og:url" content="https://novaventuresco.github.io/dailygoals/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -19,6 +30,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- SEO OPTIMIZATION: Added Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Daily Goals: Guilt-Free Focus",
+    "operatingSystem": "iOS",
+    "applicationCategory": "ProductivityApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "ratingCount": "1"
+    },
+    "description": "A simple iPhone app that helps you focus on 3–5 daily priorities with no streak pressure and a fresh start every morning.",
+    "screenshot": "https://novaventuresco.github.io/dailygoals/assets/images/screen-fresh-start.png",
+    "downloadUrl": "https://apps.apple.com/us/app/daily-goals-guilt-free-focus/id6756972771",
+    "author": {
+      "@type": "Organization",
+      "name": "Nova Ventures Co."
+    }
+  }
+  </script>
 
   <style>
     /* ─── RESET & BASE ─────────────────────────────────────── */
@@ -207,77 +246,64 @@
       background: var(--ink);
       color: white;
       text-decoration: none;
-      padding: 14px 26px;
-      border-radius: 14px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 12px 24px 12px 20px;
+      border-radius: 12px;
+      transition: background 0.2s, transform 0.15s;
     }
-    .btn-store:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(26,40,50,0.2);
-    }
-    .btn-store svg { width: 24px; height: 24px; flex-shrink: 0; }
-    .btn-store-text { line-height: 1.2; }
-    .btn-store-text small { display: block; font-size: 0.7rem; opacity: 0.7; letter-spacing: 0.02em; }
-    .btn-store-text strong { display: block; font-size: 1rem; font-weight: 600; }
+    .btn-store:hover { background: var(--ink-soft); transform: translateY(-2px); }
+    .btn-store svg { width: 32px; height: 32px; flex-shrink: 0; }
+    .btn-store-text { display: flex; flex-direction: column; gap: 0; }
+    .btn-store-text small { font-size: 0.7rem; opacity: 0.8; }
+    .btn-store-text strong { font-size: 1.05rem; letter-spacing: -0.01em; }
 
     .hero-note {
-      font-size: 0.82rem;
+      font-size: 0.9rem;
       color: var(--muted);
     }
     .hero-note strong { color: var(--ink-soft); }
 
-    /* Hero phone mockup */
     .hero-visual {
+      position: relative;
       display: flex;
       justify-content: center;
-      align-items: flex-end;
-      position: relative;
+      align-items: center;
       z-index: 1;
-      padding-bottom: 0;
     }
 
     .phone-stack {
       position: relative;
-      width: 260px;
+      width: 100%;
+      max-width: 420px;
     }
-
-    .phone-main {
-      width: 260px;
-      filter: drop-shadow(0 24px 48px rgba(58,157,191,0.22)) drop-shadow(0 8px 20px rgba(26,40,50,0.12));
-      animation: float 5s ease-in-out infinite;
-      border-radius: 36px;
+    .phone-stack img {
+      width: 100%;
+      height: auto;
+      border-radius: 32px;
+      box-shadow: 0 20px 60px rgba(26,40,50,0.2);
     }
-
     .phone-behind {
       position: absolute;
-      width: 230px;
-      right: -50px;
-      bottom: 20px;
-      opacity: 0.65;
-      filter: drop-shadow(0 12px 24px rgba(58,157,191,0.15));
-      animation: float 5s ease-in-out infinite 0.8s;
-      border-radius: 32px;
+      top: 32px; right: -56px;
+      opacity: 0.5;
+      transform: rotate(4deg) scale(0.92);
+      z-index: 0;
     }
+    .phone-main { position: relative; z-index: 1; }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-
-    /* ─── BELIEF SECTION ────────────────────────────────────── */
+    /* ─── BELIEF ────────────────────────────────────────────── */
     .belief {
-      padding: 100px 80px;
-      text-align: center;
-      background: var(--white);
+      padding: 120px 80px;
+      background: var(--sky-pale);
     }
 
     .belief-inner {
-      max-width: 680px;
-      margin: 0 auto;
+      max-width: 720px;
+      margin: 0 auto 80px;
+      text-align: center;
     }
 
     .section-label {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -287,9 +313,9 @@
 
     .belief h2 {
       font-family: var(--font-head);
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      line-height: 1.25;
-      letter-spacing: -0.02em;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.3;
       color: var(--ink);
       margin-bottom: 24px;
     }
@@ -300,69 +326,68 @@
       color: var(--ink-soft);
     }
 
-    /* Three pillars */
     .pillars {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 64px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     .pillar {
-      background: var(--sky-pale);
-      border: 1px solid var(--border);
+      background: white;
+      padding: 40px 32px;
       border-radius: var(--radius);
-      padding: 36px 28px;
-      text-align: left;
+      box-shadow: 0 4px 20px rgba(91,191,217,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pillar:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(91,191,217,0.18);
     }
 
     .pillar-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--sky);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-      font-size: 1.3rem;
+      font-size: 2.4rem;
+      margin-bottom: 20px;
     }
 
     .pillar h3 {
       font-family: var(--font-head);
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: var(--ink);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .pillar p {
-      font-size: 0.9rem;
-      line-height: 1.65;
+      font-size: 0.95rem;
+      line-height: 1.7;
       color: var(--ink-soft);
     }
 
     /* ─── FEATURES ──────────────────────────────────────────── */
     .features {
-      padding: 80px 80px 100px;
-      background: linear-gradient(180deg, var(--white) 0%, var(--sky-pale) 100%);
+      padding: 120px 80px;
+      background: white;
     }
 
     .features-header {
+      max-width: 640px;
+      margin: 0 auto 100px;
       text-align: center;
-      margin-bottom: 80px;
     }
 
     .features-header h2 {
       font-family: var(--font-head);
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      letter-spacing: -0.02em;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
       color: var(--ink);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .features-header p {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--muted);
     }
 
@@ -371,80 +396,74 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
-      max-width: 1000px;
-      margin: 0 auto 100px;
+      max-width: 1200px;
+      margin: 0 auto 120px;
     }
 
-    .feature-row:last-child { margin-bottom: 0; }
-    .feature-row.flip .feature-text { order: 2; }
-    .feature-row.flip .feature-visual { order: 1; }
+    .feature-row.flip {
+      direction: rtl;
+    }
+    .feature-row.flip > * {
+      direction: ltr;
+    }
 
-    .feature-text {}
+    .feature-visual img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      border-radius: 24px;
+      box-shadow: 0 16px 48px rgba(26,40,50,0.15);
+    }
 
     .feature-tag {
       display: inline-block;
-      background: rgba(91,191,217,0.15);
+      background: rgba(91,191,217,0.12);
       color: var(--sky-deep);
+      padding: 6px 14px;
+      border-radius: 100px;
       font-size: 0.75rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 100px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .feature-text h3 {
       font-family: var(--font-head);
-      font-size: 1.75rem;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.3;
       color: var(--ink);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .feature-text p {
-      font-size: 0.97rem;
+      font-size: 1rem;
       line-height: 1.75;
       color: var(--ink-soft);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
+    .feature-text p:last-child { margin-bottom: 0; }
 
-    .feature-visual {
-      display: flex;
-      justify-content: center;
-    }
-
-    .feature-visual img {
-      width: 220px;
-      border-radius: 28px;
-      filter: drop-shadow(0 16px 40px rgba(58,157,191,0.2)) drop-shadow(0 4px 12px rgba(26,40,50,0.08));
-      transition: transform 0.4s cubic-bezier(.16,1,.3,1);
-    }
-
-    .feature-visual img:hover {
-      transform: translateY(-6px) scale(1.02);
-    }
-
-    /* ─── SCREENSHOTS STRIP ─────────────────────────────────── */
+    /* ─── SCREENSHOTS ───────────────────────────────────────── */
     .screenshots {
-      padding: 80px 0;
+      padding: 100px 0;
       background: var(--sky-pale);
-      overflow: hidden;
     }
 
     .screenshots-header {
+      max-width: 640px;
+      margin: 0 auto 60px;
       text-align: center;
       padding: 0 80px;
-      margin-bottom: 50px;
     }
 
     .screenshots-header h2 {
       font-family: var(--font-head);
-      font-size: clamp(1.6rem, 2.5vw, 2.1rem);
-      letter-spacing: -0.02em;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
       color: var(--ink);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .screenshots-header p {
@@ -454,77 +473,108 @@
 
     .scroll-strip {
       display: flex;
-      gap: 20px;
-      padding: 10px 80px;
+      gap: 32px;
       overflow-x: auto;
+      padding: 0 80px 40px;
       scroll-snap-type: x mandatory;
-      scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
     }
-    .scroll-strip::-webkit-scrollbar { display: none; }
+    .scroll-strip::-webkit-scrollbar { height: 8px; }
+    .scroll-strip::-webkit-scrollbar-track { background: rgba(91,191,217,0.1); border-radius: 4px; }
+    .scroll-strip::-webkit-scrollbar-thumb { background: var(--sky-light); border-radius: 4px; }
 
     .scroll-strip img {
-      width: 195px;
       flex-shrink: 0;
+      width: 280px;
+      height: auto;
       border-radius: 24px;
-      scroll-snap-align: start;
-      filter: drop-shadow(0 8px 24px rgba(58,157,191,0.18));
-      transition: transform 0.3s;
+      box-shadow: 0 12px 40px rgba(26,40,50,0.12);
+      scroll-snap-align: center;
     }
-    .scroll-strip img:hover { transform: translateY(-4px); }
+
+    /* ─── FAQ SECTION (NEW FOR SEO) ─────────────────────────── */
+    .faq {
+      padding: 100px 80px;
+      background: white;
+    }
+
+    .faq-header {
+      max-width: 640px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .faq-header h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item h3 {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .faq-item p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--ink-soft);
+    }
 
     /* ─── CTA ───────────────────────────────────────────────── */
     .cta {
-      padding: 110px 80px;
-      background: linear-gradient(135deg, var(--sky) 0%, var(--sky-deep) 100%);
+      padding: 120px 80px;
+      background: linear-gradient(160deg, var(--sky-pale) 0%, var(--white) 100%);
+    }
+
+    .cta-inner {
+      max-width: 600px;
+      margin: 0 auto;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
-
-    .cta::before {
-      content: '';
-      position: absolute;
-      width: 500px; height: 500px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.06);
-      top: -150px; right: -100px;
-    }
-    .cta::after {
-      content: '';
-      position: absolute;
-      width: 300px; height: 300px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.04);
-      bottom: -80px; left: -60px;
-    }
-
-    .cta-inner { position: relative; z-index: 1; }
 
     .cta-icon {
-      width: 72px;
-      height: 72px;
+      width: 80px;
+      height: 80px;
       border-radius: 20px;
-      margin: 0 auto 28px;
-      display: block;
-      box-shadow: 0 8px 24px rgba(26,40,50,0.2);
+      margin: 0 auto 32px;
+      box-shadow: 0 8px 32px rgba(91,191,217,0.2);
     }
 
     .cta h2 {
       font-family: var(--font-head);
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
       font-weight: 700;
-      letter-spacing: -0.02em;
-      color: white;
-      margin-bottom: 18px;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 20px;
     }
 
     .cta p {
       font-size: 1.05rem;
-      color: rgba(255,255,255,0.8);
-      max-width: 440px;
-      margin: 0 auto 44px;
-      line-height: 1.65;
+      line-height: 1.75;
+      color: var(--ink-soft);
+      margin-bottom: 40px;
     }
 
     .btn-store-light {
@@ -534,35 +584,33 @@
       background: white;
       color: var(--ink);
       text-decoration: none;
-      padding: 16px 30px;
-      border-radius: 16px;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 20px rgba(26,40,50,0.15);
+      padding: 12px 24px 12px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(91,191,217,0.15);
+      transition: box-shadow 0.2s, transform 0.15s;
+      margin-bottom: 20px;
     }
     .btn-store-light:hover {
+      box-shadow: 0 8px 32px rgba(91,191,217,0.25);
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(26,40,50,0.2);
     }
-    .btn-store-light svg { width: 24px; height: 24px; }
-    .btn-store-light .btn-store-text small { font-size: 0.7rem; opacity: 0.6; }
-    .btn-store-light .btn-store-text strong { font-size: 1rem; }
+    .btn-store-light svg { width: 32px; height: 32px; flex-shrink: 0; }
 
     .cta-note {
-      margin-top: 20px;
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.6);
+      font-size: 0.85rem;
+      color: var(--muted);
     }
 
     /* ─── FOOTER ────────────────────────────────────────────── */
     footer {
-      padding: 40px 80px;
+      padding: 60px 80px;
       background: var(--ink);
+      color: rgba(255,255,255,0.7);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 32px;
     }
 
     .footer-brand {
@@ -571,14 +619,14 @@
       gap: 10px;
     }
     .footer-brand img {
-      width: 28px; height: 28px;
-      border-radius: 7px;
-      opacity: 0.85;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
     }
     .footer-brand span {
       font-family: var(--font-head);
-      color: rgba(255,255,255,0.7);
-      font-size: 0.95rem;
+      font-weight: 600;
+      color: white;
     }
 
     .footer-links {
@@ -586,72 +634,68 @@
       gap: 28px;
     }
     .footer-links a {
-      color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.7);
       text-decoration: none;
-      font-size: 0.83rem;
+      font-size: 0.9rem;
       transition: color 0.2s;
     }
-    .footer-links a:hover { color: rgba(255,255,255,0.8); }
+    .footer-links a:hover { color: white; }
 
     .footer-copy {
-      color: rgba(255,255,255,0.3);
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
 
     /* ─── RESPONSIVE ────────────────────────────────────────── */
     @media (max-width: 900px) {
       body > nav { padding: 14px 24px; }
-
       .hero {
         grid-template-columns: 1fr;
-        padding: 50px 28px 60px;
+        padding: 60px 24px;
         text-align: center;
-        gap: 56px;
       }
-      .hero-sub { margin: 0 auto 40px; }
+      .hero-text { max-width: 100%; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
       .hero-actions { justify-content: center; }
-      .hero-visual { justify-content: center; }
+      .hero-visual { margin-top: 60px; }
       .phone-behind { display: none; }
-      .phone-main { width: 220px; }
 
-      .belief { padding: 70px 28px; }
-      .pillars { grid-template-columns: 1fr; gap: 16px; }
+      .belief { padding: 80px 24px; }
+      .pillars { grid-template-columns: 1fr; }
 
-      .features { padding: 60px 28px 80px; }
-      .feature-row,
-      .feature-row.flip {
+      .features { padding: 80px 24px; }
+      .feature-row {
         grid-template-columns: 1fr;
         gap: 40px;
-        margin-bottom: 70px;
       }
-      .feature-row .feature-text,
-      .feature-row .feature-visual { order: unset !important; }
-      .feature-visual { order: -1 !important; }
+      .feature-row.flip { direction: ltr; }
+      .feature-visual img { margin: 0 auto; }
 
-      .screenshots-header { padding: 0 28px; }
-      .scroll-strip { padding: 10px 28px; }
+      .screenshots { padding: 80px 0; }
+      .screenshots-header { padding: 0 24px; }
+      .scroll-strip { padding: 0 24px 40px; }
 
-      .cta { padding: 80px 28px; }
+      .faq { padding: 80px 24px; }
+
+      .cta { padding: 80px 24px; }
 
       footer {
-        padding: 32px 28px;
+        padding: 40px 24px;
         flex-direction: column;
         text-align: center;
-        gap: 16px;
       }
-      .footer-links { justify-content: center; }
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-brand">
-      <img src="assets/images/splash-icon.png" alt="Daily Goals icon" />
+    <a href="/" class="nav-brand">
+      <img src="assets/images/splash-icon.png" alt="Daily Goals" />
       <span>Daily Goals</span>
     </a>
-    <a href="https://apps.apple.com/us/app/daily-goals/id6756972771" class="nav-cta" target="_blank" rel="noopener">
+    <a href="https://apps.apple.com/us/app/daily-goals-guilt-free-focus/id6756972771" class="nav-cta" target="_blank" rel="noopener">
       Download Free
     </a>
   </nav>
@@ -665,7 +709,7 @@
         Set 3–5 priorities. Check them off. At midnight, the slate is wiped clean — no carried failures, no broken streaks, no judgment. Just today.
       </p>
       <div class="hero-actions reveal reveal-d3">
-        <a href="https://apps.apple.com/us/app/daily-goals/id6756972771" class="btn-store" target="_blank" rel="noopener">
+        <a href="https://apps.apple.com/us/app/daily-goals-guilt-free-focus/id6756972771" class="btn-store" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
             <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.78 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
           </svg>
@@ -674,7 +718,7 @@
             <strong>App Store</strong>
           </div>
         </a>
-        <p class="hero-note"><strong>Free</strong> · Sign up in seconds · No subscription</p>
+        <p class="hero-note"><strong>Free</strong> · Sign up in seconds · No ads</p>
       </div>
     </div>
 
@@ -776,7 +820,7 @@
     </div>
   </section>
 
-  <!-- SCREENSHOT STRIP -->
+  <!-- SCREENSHOTS STRIP -->
   <section class="screenshots">
     <div class="screenshots-header">
       <p class="section-label reveal">See it in action</p>
@@ -793,14 +837,48 @@
     </div>
   </section>
 
+  <!-- FAQ SECTION (NEW FOR SEO) -->
+  <section class="faq">
+    <div class="faq-header">
+      <p class="section-label reveal">Questions</p>
+      <h2 class="reveal reveal-d1">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <h3>Is Daily Goals really free?</h3>
+        <p>Yes. The app is completely free to download and use. There's an optional donation if you find it helpful, but it's not required to access any features.</p>
+      </div>
+      <div class="faq-item reveal reveal-d1">
+        <h3>Is my data private?</h3>
+        <p>Absolutely. Your goals are stored securely in your account and are never shared, sold, or used for advertising. There's no tracking, no analytics, and no third-party access to your data.</p>
+      </div>
+      <!--<div class="faq-item reveal reveal-d2">
+        <h3>Does Daily Goals work offline?</h3>
+        <p>Yes. You can add, edit, and check off goals without an internet connection. Your data syncs automatically when you're back online.</p>
+      </div>-->
+      <div class="faq-item reveal reveal-d3">
+        <h3>What makes this different from other habit trackers?</h3>
+        <p>Most habit trackers use streaks and gamification that make you feel guilty when you miss a day. Daily Goals resets every midnight — incomplete goals don't carry over. You focus on today's priorities without the pressure of maintaining perfect streaks.</p>
+      </div>
+      <div class="faq-item reveal reveal-d4">
+        <h3>Can I track more than 3-5 goals per day?</h3>
+        <p>You can add up to 10 goals each day, but the app is designed around the idea of focusing on 3-5 top priorities each day. This helps prevent overwhelm and keeps you focused on what truly matters.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Is Daily Goals available on Android?</h3>
+        <p>Not yet. Daily Goals is currently only available for iPhone. An Android version may come in the future depending on user demand.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta">
     <div class="cta-inner">
       <img src="assets/images/splash-icon.png" alt="Daily Goals" class="cta-icon reveal" />
       <h2 class="reveal reveal-d1">Start fresh tomorrow.</h2>
-      <p class="reveal reveal-d2">Free to download. Sign up in seconds. No subscription, no hidden fees. Just a better way to focus on what matters today.</p>
+      <p class="reveal reveal-d2">Free to download. Sign up in seconds. No ads, no hidden fees. Just a better way to focus on what matters today.</p>
       <div class="reveal reveal-d3">
-        <a href="https://apps.apple.com/us/app/daily-goals/id6756972771" class="btn-store-light" target="_blank" rel="noopener">
+        <a href="https://apps.apple.com/us/app/daily-goals-guilt-free-focus/id6756972771" class="btn-store-light" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.78 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
           </svg>
@@ -822,10 +900,53 @@
     </div>
     <nav class="footer-links">
       <a href="https://novaventuresco.github.io/dailygoals-privacy/" target="_blank" rel="noopener">Privacy Policy</a>
-      <a href="https://apps.apple.com/us/app/daily-goals/id6756972771" target="_blank" rel="noopener">App Store</a>
+      <a href="https://apps.apple.com/us/app/daily-goals-guilt-free-focus/id6756972771" target="_blank" rel="noopener">App Store</a>
+      <a href="/blog">Blog</a>
     </nav>
     <span class="footer-copy">© 2025 Nova Ventures Co.</span>
   </footer>
+
+  <!-- SEO OPTIMIZATION: Added FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Daily Goals really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The app is completely free to download and use. There's an optional $0.99 donation if you find it helpful, but it's not required to access any features."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Your goals are stored securely in your account and are never shared, sold, or used for advertising. There's no tracking, no analytics, and no third-party access to your data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Daily Goals work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can add, edit, and check off goals without an internet connection. Your data syncs automatically when you're back online."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes this different from other habit trackers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most habit trackers use streaks and gamification that make you feel guilty when you miss a day. Daily Goals resets every midnight — incomplete goals don't carry over. You focus on today's priorities without the pressure of maintaining perfect streaks."
+        }
+      }
+    ]
+  }
+  </script>
 
   <script>
     // Scroll-triggered reveal
